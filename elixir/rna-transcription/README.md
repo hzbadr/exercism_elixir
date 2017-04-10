@@ -1,6 +1,6 @@
 # Rna Transcription
 
-Write a program that, given a DNA strand, returns its RNA complement (per RNA transcription).
+Given a DNA strand, return its RNA complement (per RNA transcription).
 
 Both DNA and RNA strands are a sequence of nucleotides.
 

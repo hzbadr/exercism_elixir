@@ -1,6 +1,6 @@
 # Phone Number
 
-Write a program that cleans up user-entered phone numbers so that they can be sent SMS messages.
+Clean up user-entered phone numbers so that they can be sent SMS messages.
 
 The rules are as follows:
 

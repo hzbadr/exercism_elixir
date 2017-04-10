@@ -1,6 +1,6 @@
 # Space Age
 
-Write a program that, given an age in seconds, calculates how old someone is in terms of a given planet's solar years.
+Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.
 
 Given an age in seconds, calculate how old someone would be on:
 

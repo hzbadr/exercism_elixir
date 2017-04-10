@@ -1,6 +1,6 @@
 # Scrabble Score
 
-Write a program that, given a word, computes the scrabble score for that word.
+Given a word, compute the scrabble score for that word.
 
 ## Letter Values
 

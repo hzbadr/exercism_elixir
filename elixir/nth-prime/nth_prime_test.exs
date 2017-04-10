@@ -13,37 +13,22 @@ defmodule NthPrimeTest do
     assert Prime.nth(1) == 2
   end
 
-  # @tag :pending
+  @tag :pending
   test "second prime" do
     assert Prime.nth(2) == 3
   end
 
-  # @tag :pending
+  @tag :pending
   test "sixth prime" do
     assert Prime.nth(6) == 13
   end
 
-  # @tag :pending
+  @tag :pending
   test "100th prime" do
     assert Prime.nth(100) == 541
   end
 
-  # @tag :pending
-  test "500th prime" do
-    assert Prime.nth(500) == 3571
-  end
-
-  # @tag :pending
-  test "1000th prime" do
-    assert Prime.nth(1000) == 7919
-  end
-
-  # @tag :pending
-  test "3000th prime" do
-    assert Prime.nth(3000) == 27449
-  end
-
-  # @tag :pending
+  @tag :pending
   test "weird case" do
     catch_error Prime.nth(0)
   end
