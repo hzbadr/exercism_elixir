@@ -27,11 +27,8 @@ defmodule Tournament do
     |> Enum.map(&parse/1)
     |> Enum.filter(&(&1))
     |> Enum.reduce(%{}, fn(match, accum)->
-      Enum.reduce(match, accum, fn({t, s}, acc) ->
-        ts = Map.get(acc, t, %{"L" => 0, "D" => 0, "W" => 0, "score" => 0})
-        current = Map.get(ts, s, 0)
-        ts = Map.put(ts, s, current+1)
-        Map.put(acc, t, ts)
+      Enum.reduce(match, accum, fn({team, result}, acc) ->
+        update_team_score(acc, team, result)
       end)
     end)
     |> Enum.map(&calc_score/1)
@@ -64,4 +61,11 @@ defmodule Tournament do
     {team, %{"W"=> win, "L" => loss, "D" => draw, "score" => score}}
   end
 
+  defp update_team_score(acc, team, result) do
+    case Map.has_key?(acc, team) do
+      false ->  Map.put(acc, team, %{"L" => 0, "D" => 0, "W" => 0, "score" => 0})
+      true -> acc
+    end
+    |> update_in([team, result], &(&1 + 1))
+  end
 end
