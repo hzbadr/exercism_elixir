@@ -22,7 +22,7 @@ defmodule Meetup do
   def meetup(year, month, weekday, schedule) do
     weeks = month_days(year, month)
     |> Enum.chunk(7, 7, [])
-    day = find_day(weeks, weekday, schedule) + 1
+    day = find_day(weeks, weekday, schedule)
     {year, month, day}
 
   end
@@ -42,7 +42,7 @@ defmodule Meetup do
 
   def find_day(weeks, weekday, :first) do
     week = Enum.at(weeks, 0)
-    Enum.find_index(week, fn(day) -> day == weekday end)
+    Enum.find_index(week, fn(day) -> day == weekday end) + 1
   end
   def find_day(weeks, weekday, :second) do
     7 + find_day(weeks, weekday, :first)
