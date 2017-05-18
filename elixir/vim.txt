@@ -1,0 +1,56 @@
+Files
+,te -> open tabe edit
+,e  -> fzf current directory
+\   -> global search
+
+Buffer
+,z  -> prev buffer
+,x  -> next buffer
+,b  -> list current buffer
+,c  -> close buffer
+
+Split
+,h -> horizontal split
+,v -> vertical split
+
+Switch window
+CTRL+j
+CTRL+k
+CTRL+l
+CTRL+h
+
+Text
+ysw" -> surround word with "
+
+Move lines
+Visual Mode SHIFT+J
+Visual Mode Shift+K
+
+GIT
+,ga  -> git add/write
+,gc  -> git commit
+,gsh -> git push
+,gll -> git pull
+,gs  -> git status
+,gb  -> git blame
+,gd  -> git diff
+,gr  -> git remove
+
+Rspec
+,t -> Run current file spec
+,s -> Run nearest spec ??
+,l -> Run last spec
+,a -> Run all specs
+
+Ruby Refactor
+,rap  -> add parameter
+,rcpc -> convert post conditions
+,rel  -> extract let ??
+,rec  -> extract constant
+,relv -> extract local variable
+,rit  -> inline temp
+,rrlv -> rename local variable
+,rriv -> rename instance variable
+,rem  -> extract method
+
+
