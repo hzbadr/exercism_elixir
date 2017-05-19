@@ -1,32 +1,79 @@
-Files
+{command} {text object | motion}
+
+## Text Objects conventions
+w -> words
+s -> sentences
+p -> paragraphs
+t -> tags
+
+## Motion
+a -> all
+i -> in
+t -> `til
+f -> find forward
+F -> find backword
+
+## Comands
+d   -> delete
+c   -> change (same as delete but moves to insert mode)
+y   -> yank (copy)
+D   -> delete until the end of the line
+C   -> change until the end of the line
+v   -> visually select
+^/$ -> move to the beginning/end of the line
+I/A -> move to the beginning/end of the line and insert mode
+o/O -> insert new line above/below current line and insert mode
+.   -> repeats last command
+
+## Files
 ,te -> open tabe edit
 ,e  -> fzf current directory
 \   -> global search
 
-Buffer
+## Buffer
 ,z  -> prev buffer
 ,x  -> next buffer
 ,b  -> list current buffer
 ,c  -> close buffer
 
-Split
+## Scroll
+CTRL+e  -> scroll window down, cursor doesn't move
+CTRL+y  -> scroll window up, cursor doesn't move
+CTRL+f  -> scroll down one page
+CTRL+b  -> scroll up one page
+Shift+h -> move cusror to the top of the page
+Shift+m -> move cursor to the middle of the page
+Shift+l -> move cursor to the bottom of the page
+Shift+g -> go the end of the file
+gg      -> go to top of the file
+
+## Split
 ,h -> horizontal split
 ,v -> vertical split
 
-Switch window
+## Switch window
 CTRL+j
 CTRL+k
 CTRL+l
 CTRL+h
 
-Text
-ysw" -> surround word with "
+## Text
+diw   -> delete in word
+cw    -> change the word starting from the cursor position
+caw   -> change all the word regardless of the cusror position
+di)   -> delete inside parentheses
+da)   -> delete inside parentheses, including the parentheses
+dt,   -> delete until the coma
+df,   -> delete until the coma including the coma
+va"   -> visually select all inside douple quotes
+ysw"  -> surround word with "
+ysiw" -> surround word with " when cursor in the middle
 
-Move lines
+## Move lines
 Visual Mode SHIFT+J
 Visual Mode Shift+K
 
-GIT
+## GIT
 ,ga  -> git add/write
 ,gc  -> git commit
 ,gsh -> git push
@@ -36,13 +83,13 @@ GIT
 ,gd  -> git diff
 ,gr  -> git remove
 
-Rspec
+## Rspec
 ,t -> Run current file spec
 ,s -> Run nearest spec ??
 ,l -> Run last spec
 ,a -> Run all specs
 
-Ruby Refactor
+## Ruby Refactor
 ,rap  -> add parameter
 ,rcpc -> convert post conditions
 ,rel  -> extract let ??
@@ -53,4 +100,5 @@ Ruby Refactor
 ,rriv -> rename instance variable
 ,rem  -> extract method
 
-
+## Macros record -> q{register}  -> do something -> q
+play   -> @{register}
