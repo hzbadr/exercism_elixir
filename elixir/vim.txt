@@ -1,6 +1,6 @@
 {command} {text object | motion}
 
-## Text Objects conventions
+## Text Objects Conventions
 w -> words
 s -> sentences
 p -> paragraphs
@@ -9,21 +9,35 @@ t -> tags
 ## Motion
 a -> all
 i -> in
-t -> `til
-f -> find forward
+t -> `til (exclusive)
+f -> find forward inclusive
 F -> find backword
 
 ## Comands
 d   -> delete
 c   -> change (same as delete but moves to insert mode)
 y   -> yank (copy)
+p   -> paste below
+P   -> pase above
 D   -> delete until the end of the line
 C   -> change until the end of the line
 v   -> visually select
 ^/$ -> move to the beginning/end of the line
 I/A -> move to the beginning/end of the line and insert mode
 o/O -> insert new line above/below current line and insert mode
+~   -> Toggle case of charachter
+g~  -> Toggle case of motion
 .   -> repeats last command
+
+## Search
+/  -> find forward
+?  -> find backword
+*  -> find forward bounded
+g* -> find forward unbounded
+#  -> find backword bounded
+#g -> find backword unbounded
+n  -> next
+N  -> previous
 
 ## Files
 ,te -> open tabe edit
@@ -73,7 +87,7 @@ ysiw" -> surround word with " when cursor in the middle
 Visual Mode SHIFT+J
 Visual Mode Shift+K
 
-## GIT
+## Git
 ,ga  -> git add/write
 ,gc  -> git commit
 ,gsh -> git push
