@@ -1,18 +1,5 @@
 {command} {text object | motion}
 
-## Text Objects Conventions
-w -> words
-s -> sentences
-p -> paragraphs
-t -> tags
-
-## Motion
-a -> all
-i -> in
-t -> `til (exclusive)
-f -> find forward inclusive
-F -> find backword
-
 ## Comands
 d   -> delete
 c   -> change (same as delete but moves to insert mode)
@@ -28,6 +15,19 @@ o/O -> insert new line above/below current line and insert mode
 ~   -> Toggle case of charachter
 g~  -> Toggle case of motion
 .   -> repeats last command
+
+## Motion
+a -> all
+i -> in
+t -> `til (exclusive)
+f -> find forward inclusive
+F -> find backword
+
+## Text Objects Conventions
+w -> words
+s -> sentences
+p -> paragraphs
+t -> tags
 
 ## Search
 /  -> find forward
@@ -116,3 +116,7 @@ Visual Mode Shift+K
 
 ## Macros record -> q{register}  -> do something -> q
 play   -> @{register}
+
+
+## run comman > ctags -R --exclude=.git --exclude=log * <
+CTRL+]
