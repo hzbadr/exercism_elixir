@@ -1,4 +1,4 @@
-{command} {text object | motion}
+{number} {command} {text object | motion}
 
 ## Comands
 d   -> delete
@@ -27,7 +27,7 @@ F -> find backword
 w -> words
 s -> sentences
 p -> paragraphs
-t -> tags
+t -> tags (HTML)
 
 ## Search
 /  -> find forward
@@ -82,6 +82,9 @@ df,   -> delete until the coma including the coma
 va"   -> visually select all inside douple quotes
 ysw"  -> surround word with "
 ysiw" -> surround word with " when cursor in the middle
+cs"'  -> change surrounding " to '
+cst"  -> change surrounding tag to "
+ds'   -> delete surronding '
 
 ## Move lines
 Visual Mode SHIFT+J
